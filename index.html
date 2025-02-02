@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #35424a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #fact {
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Random Facts Generator</h1>
+    </header>
+    <section>
+        <button id="factButton">Get a Random Fact</button>
+        <div id="fact"></div>
+    </section>
+
+    <script>
+        const facts = [
+            "Honey never spoils.",
+            "A group of flamingos is called a 'flamboyance'.",
+            "Bananas are berries, but strawberries aren't.",
+            "Octopuses have three hearts.",
+            "The Eiffel Tower can be 15 cm taller during the summer.",
+            "A jiffy is an actual unit of time: 1/100th of a second.",
+            "Wombat poop is cube-shaped.",
+            "The longest place name in the world is 85 letters long.",
+            "A shrimp's heart is located in its head.",
+            "The world's largest desert is Antarctica."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
